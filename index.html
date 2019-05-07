@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div class="main" v-clickoutside="handleClose" @keyup="handleKey">
+      <button @click="show = !show">点击显示下拉菜单</button>
+      <div class="dropdown" v-show="show">
+        <p>下拉框的内容，点击外面区域可以关闭</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/vue.js" charset="utf-8"></script>
+  <script src="clickoutside.js" charset="utf-8"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
